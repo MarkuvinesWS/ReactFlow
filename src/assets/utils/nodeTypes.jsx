@@ -7,4 +7,5 @@ export const nodeTypes = {
   rectSections: () => <CustomNode nodeName={'rectSections'}/>,
   parallelogram: () => <CustomNode nodeName={'parallelogram'} handlesStyle={ {left: {left: 10}, right: {right: 10} }}/>,
   sixCorn: () => <CustomNode nodeName={'sixCorn'}/>,
+  rectUp: () => <CustomNode nodeName={'rectUp'}/>,
 };

@@ -49,3 +49,10 @@
   background-position: center;
   background-size: cover;
 }
+
+.rectUp {
+  background-color: transparent;
+  background-image: url("/public/rectUp.svg");
+  background-position: center;
+  background-size: cover;
+}
