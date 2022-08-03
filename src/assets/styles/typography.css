@@ -6,3 +6,11 @@
   line-height: 39px;
   color: #000000;
 }
+.main-style-edit {
+  border: 2px solid #1976D2;
+  border-radius: 8px;
+  outline: none;
+}
+.nodeInput {
+  width: 70%;
+}
