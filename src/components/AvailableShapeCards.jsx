@@ -8,7 +8,8 @@ const dict = [
   "rectSections",
   "parallelogram",
   "sixCorn",
-  "rectUp"
+  "rectUp",
+  "rectDown",
 ]
 
 const AvailableShapeCards = () => {

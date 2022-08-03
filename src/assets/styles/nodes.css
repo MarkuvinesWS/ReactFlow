@@ -56,3 +56,9 @@
   background-position: center;
   background-size: cover;
 }
+.rectDown {
+  background-color: transparent;
+  background-image: url("/public/rectDown.svg");
+  background-position: center;
+  background-size: cover;
+}
