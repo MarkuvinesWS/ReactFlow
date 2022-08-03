@@ -62,3 +62,11 @@
   background-position: center;
   background-size: cover;
 }
+
+.circle {
+  background-color: transparent;
+  background-image: url("/public/circle.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

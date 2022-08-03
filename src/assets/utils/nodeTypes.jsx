@@ -9,4 +9,5 @@ export const nodeTypes = {
   sixCorn: () => <CustomNode nodeName={'sixCorn'}/>,
   rectUp: () => <CustomNode nodeName={'rectUp'}/>,
   rectDown: () => <CustomNode nodeName={'rectDown'}/>,
+  circle: () => <CustomNode nodeName={'circle'} handlesStyle={{left: {left: 37}, right: {right: 37} }}/>,
 };

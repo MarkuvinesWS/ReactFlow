@@ -10,6 +10,7 @@ const dict = [
   "sixCorn",
   "rectUp",
   "rectDown",
+  "circle",
 ]
 
 const AvailableShapeCards = () => {
