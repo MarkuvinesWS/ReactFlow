@@ -24,7 +24,7 @@
 }
 .rhombus {
   background-color: transparent;
-  background-image: url("/public/rect.svg");
+  background-image: url("/public/rhombus.svg");
   background-position: center;
   background-size: cover;
 }
@@ -38,14 +38,14 @@
 
 .parallelogram {
   background-color: transparent;
-  background-image: url("/public/parallelogram.png");
+  background-image: url("/public/parallelogram.svg");
   background-position: center;
   background-size: cover;
 }
 
 .sixCorn {
   background-color: transparent;
-  background-image: url("/public/sixCorn.png");
+  background-image: url("/public/sixCornRect.svg");
   background-position: center;
   background-size: cover;
 }
