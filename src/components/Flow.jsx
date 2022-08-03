@@ -1,4 +1,4 @@
-import React, {useCallback, useRef} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 import ReactFlow, {
   MiniMap,
   Controls,
@@ -11,9 +11,11 @@ import 'react-flow-renderer/dist/style.css'
 import 'react-flow-renderer/dist/theme-default.css'
 import { nodeTypes } from "../assets/utils/nodeTypes";
 
-function Flow() {
+function Flow({getFlowInstance}) {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  const [flowInst, setFlowInst] = useState(null);
+
   const id = useRef(1);
   const onConnect = useCallback(
     (connection) => setEdges((eds) => addEdge(connection, eds)),
@@ -21,6 +23,7 @@ function Flow() {
   );
   return (
     <ReactFlow
+      onInit={(inst) => {setFlowInst(inst); getFlowInstance(inst)}}
       onDragOver={(event) => {event.preventDefault()}}
       onDrop={(event) => {
         event.preventDefault();
@@ -30,9 +33,8 @@ function Flow() {
           id: `${id.current++}`,
           type: `${nodeType}`,
           data: { label: 'Main' },
-          position: { x: 250, y: 250 },
+          position: flowInst.project({x: event.nativeEvent.offsetX, y: event.nativeEvent.offsetY}),
         }
-
         nodesCopy.push(newNode);
         setNodes(nodesCopy);
       }}
