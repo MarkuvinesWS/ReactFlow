@@ -25,7 +25,7 @@ const MainPanel = () => {
         <Flow />
       </Paper>
       <Paper className={'sideBar-container'} elevation={4}>
-        <Ellipse/>
+        <AvailableShapeCards/>
       </Paper>
     </Paper>
     </div>
