@@ -5,6 +5,8 @@ const NodeCard = ({ shape }) => {
 
   function onDragStartHandler( event ) {
     event.dataTransfer.setData('text', `${ shape }`);
+    event.dataTransfer.setData('xPos', `${ event.nativeEvent.offsetX }`);
+    event.dataTransfer.setData('yPos', `${ event.nativeEvent.offsetY }`);
   }
 
   return (
