@@ -14,3 +14,21 @@
 .nodeInput {
   width: 70%;
 }
+.modal-title {
+  margin: 0 0 19px 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 24px;
+  color: #000000;
+}
+.modal-text {
+  margin: 0 0 auto 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
