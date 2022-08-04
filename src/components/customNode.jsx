@@ -1,13 +1,16 @@
 import React from 'react';
 import { useState } from "react";
-import { Handle } from "react-flow-renderer/nocss";
+import {Handle, useReactFlow} from "react-flow-renderer/nocss";
 
-function CustomNode({nodeName, handlesStyle}) {
-  const [ text, setText ] = useState('');
+function CustomNode({handlesStyle, id, data, type}) {
+  const [ text, setText ] = useState(data.innerText);
   const [ edit, setEdit ] = useState(false);
-
+  const flow = useReactFlow();
   function onSubmitHandler( event ) {
-    event.preventDefault(); setEdit(false)
+    event.preventDefault();
+    const targetNode = flow.getNode(id);
+    targetNode.data.innerText = text;
+    setEdit(false);
   }
   function doubleClickHandler() {
     setEdit(true)
@@ -21,7 +24,7 @@ function CustomNode({nodeName, handlesStyle}) {
       <Handle type="source" id="b" position="bottom" />
       <Handle type="source" id="c" position="left" style={handlesStyle && handlesStyle.left} />
       <Handle type="source" id="d" position="right" style={handlesStyle && handlesStyle.right} />
-      <form onSubmit={onSubmitHandler} onDoubleClick={doubleClickHandler} className={`node ${nodeName}`}>
+      <form onSubmit={onSubmitHandler} onDoubleClick={doubleClickHandler} className={`node ${type}`}>
         {
           edit
           ? <input className={'nodeInput'} value={text} onChange={onChangeHandler} />
